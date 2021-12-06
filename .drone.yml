@@ -2,12 +2,8 @@ kind: pipeline
 name: default
 
 steps:
-- name: build
-  image: maven:3
-  commads:
-  - mvn clean install
-  
 - name: test
-  image: maven:3
+  image: maven:3-jdk-10
   commands:
-  - mvn clean install
+  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - mvn test -B
