@@ -5,8 +5,6 @@ steps:
 - name: build
   image: maven:3
   commads:
-  - echo $JAVA_HOME
-  - java -version
   - mvn compile
   
 - name: test
