@@ -5,7 +5,7 @@ steps:
 - name: build
   image: maven:3
   commads:
-  - mvn compile
+  - mvn clean install
   
 - name: test
   image: maven:3
